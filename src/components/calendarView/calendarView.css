@@ -82,7 +82,8 @@
   border-radius: 0.5rem;
   color: var(--color-dark);
   font-size: 0.8rem;
-  background-color: white;
+  background-color: transparent;
+  border: 1px solid transparent;
 }
 
 .calendar-view__time-slot--booked {
@@ -91,18 +92,34 @@
 }
 
 .calendar-view__time-slot--disabled {
-  background-color: #d1d5db;
   color: #9ca3af;
-  text-decoration: line-through;
+  background-color: transparent;
 }
 
 .calendar-view__day--current {
-  border: 2px solid #6366f1;
+  background-color: #e4eafa;
+  border: none;
 }
 
 .calendar-view__day--inactive {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.calendar-view__time-slot:empty::before,
+.calendar-view__time-slot:-moz-only-whitespace::before {
+  content: "—";
+  opacity: 0.5;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.calendar-view__time-slot {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Medium devices (tablets, 768px and up) */

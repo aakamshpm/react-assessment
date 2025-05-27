@@ -21,6 +21,7 @@ export const calendarSchedule = [
       { time: "10:00", available: true, booked: false },
     ],
   },
+
   {
     date: 27,
     day: "Wed",
@@ -28,6 +29,7 @@ export const calendarSchedule = [
     isCurrentDay: false,
     times: [
       { time: "12:00", available: true, booked: false },
+      { time: "", available: false, booked: false }, // Empty slot
       { time: "13:00", available: true, booked: false },
     ],
   },
@@ -38,7 +40,8 @@ export const calendarSchedule = [
     isCurrentDay: false,
     times: [
       { time: "10:00", available: true, booked: false },
-      { time: "11:00", available: true, booked: true }, // Highlighted
+      { time: "11:00", available: true, booked: true },
+      { time: "", available: false, booked: false }, // Empty slot
     ],
   },
   {
@@ -47,6 +50,7 @@ export const calendarSchedule = [
     isActive: true,
     isCurrentDay: false,
     times: [
+      { time: "", available: false, booked: false }, // Empty slot
       { time: "14:00", available: true, booked: false },
       { time: "16:00", available: true, booked: false },
     ],

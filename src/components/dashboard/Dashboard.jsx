@@ -38,29 +38,35 @@ const Dashboard = () => {
             </div>
 
             <div className="upcoming-appointments">
-              <h2>The Upcoming Schedule</h2>
-              <div>
-                <p>On Thursday</p>
-                {upcomingSchedules.thursday.map((appointment, index) => (
-                  <SimpleAppointmentCard
-                    key={index}
-                    title={appointment.title}
-                    icon={appointment.icon}
-                    time={appointment.time}
-                  />
-                ))}
+              <h3 className="upcoming-appointments__title">
+                Upcoming Schedule
+              </h3>
+              <div className="upcoming-appointments__day-group">
+                <p className="upcoming-appointments__day-label">On Thursday</p>
+                <div className="upcoming-appointments__cards">
+                  {upcomingSchedules.thursday.map((appointment, index) => (
+                    <SimpleAppointmentCard
+                      key={index}
+                      title={appointment.title}
+                      icon={appointment.icon}
+                      time={appointment.time}
+                    />
+                  ))}
+                </div>
               </div>
 
-              <div>
-                <p>On Saturday</p>
-                {upcomingSchedules.saturday.map((appointment, index) => (
-                  <SimpleAppointmentCard
-                    key={index}
-                    title={appointment.title}
-                    icon={appointment.icon}
-                    time={appointment.time}
-                  />
-                ))}
+              <div className="upcoming-appointments__day-group">
+                <p className="upcoming-appointments__day-label">On Saturday</p>
+                <div className="upcoming-appointments__cards">
+                  {upcomingSchedules.saturday.map((appointment, index) => (
+                    <SimpleAppointmentCard
+                      key={index}
+                      title={appointment.title}
+                      icon={appointment.icon}
+                      time={appointment.time}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

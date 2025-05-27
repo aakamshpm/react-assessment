@@ -1,5 +1,5 @@
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
-import { calendarSchedule } from "../../data/calendarSchedule";
+import { calendarSchedule } from "../../data/calendarSchedule.js";
 import "./calendarView.css";
 
 const CalendarView = () => {
@@ -40,7 +40,7 @@ const CalendarView = () => {
 
                   return (
                     <div key={i} className={slotClass}>
-                      {slot.time}
+                      {slot.time === "" ? "-" : slot.time}
                     </div>
                   );
                 })}

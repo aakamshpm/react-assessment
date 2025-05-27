@@ -3,6 +3,8 @@ import { healthData } from "../../data/healthData.js";
 import "./healthStatusCards.css";
 
 const HealthStatusCards = () => {
+  const barColors = ["#b34946", "#79d1c4", "#ff7c57"];
+
   return (
     <div className="health-status-cards">
       {healthData.map((item, i) => (
@@ -21,7 +23,10 @@ const HealthStatusCards = () => {
           </p>
 
           <div className="bar">
-            <div className="bar-fill" />
+            <div
+              className="bar-fill"
+              style={{ backgroundColor: barColors[i % barColors.length] }}
+            />
           </div>
         </div>
       ))}
