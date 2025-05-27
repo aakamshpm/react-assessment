@@ -1,4 +1,4 @@
-import DashboardOverview from "../dashboardOverview/dashboardOverview.jsx";
+import DashboardOverview from "../dashboardOverview/DashboardOverview.jsx";
 import "./dashboard.css";
 import ActivityFeed from "../actitivityFeed/ActivityFeed.jsx";
 import CalendarView from "../calendarView/CalendarView.jsx";
