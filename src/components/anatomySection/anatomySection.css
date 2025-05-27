@@ -1,0 +1,65 @@
+.anatomy-section {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-light);
+  display: inline-block;
+}
+
+.anatomy-section__image-container {
+  position: relative;
+  width: 270px;
+  height: auto;
+}
+
+.anatomy-section__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.anatomy-section__zoom {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+.anatomy-section__zoom svg {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.anatomy-card-position.health-card-heart {
+  position: absolute;
+  top: 4.3rem;
+  left: 7.4rem;
+}
+
+.anatomy-card-position.health-card-left-leg {
+  position: absolute;
+  bottom: 9.7rem;
+  right: 7.5rem;
+}
+
+@media (max-width: 768px) {
+  .anatomy-section {
+    padding: 1.5rem;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .anatomy-section__image-container {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .anatomy-section__image-container {
+    transform: scale(0.8);
+  }
+}

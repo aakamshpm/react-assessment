@@ -1,0 +1,158 @@
+.calendar-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.calendar-view__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.calendar-view__title {
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.calendar-view__navigation {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.calendar-view__nav-button {
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.calendar-view__days-container {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-top: 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.calendar-view__days {
+  display: flex;
+  gap: 0.75rem;
+  min-width: max-content;
+}
+
+.calendar-view__day {
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  width: 6.5rem;
+  min-width: 6.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: var(--color-light);
+}
+
+.calendar-view__day-header {
+  margin-bottom: 0.75rem;
+}
+
+.calendar-view__day-name {
+  font-weight: 600;
+  color: var(--color-dark);
+  display: block;
+  font-size: 0.85rem;
+}
+
+.calendar-view__day-date {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.calendar-view__time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calendar-view__time-slot {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  color: var(--color-dark);
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.calendar-view__time-slot--booked {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.calendar-view__time-slot--disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.calendar-view__day--current {
+  border: 2px solid #6366f1;
+}
+
+.calendar-view__day--inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .calendar-view__title {
+    font-size: 1.5rem;
+  }
+
+  .calendar-view__days {
+    gap: 1rem;
+  }
+
+  .calendar-view__day {
+    width: 7.5rem;
+    min-width: 7.5rem;
+    padding: 1rem;
+  }
+
+  .calendar-view__day-name {
+    font-size: 0.9rem;
+  }
+
+  .calendar-view__day-date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .calendar-view__days-container {
+    overflow-x: visible;
+  }
+
+  .calendar-view__days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .calendar-view__day {
+    width: auto;
+    min-width: auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .calendar-view__days {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

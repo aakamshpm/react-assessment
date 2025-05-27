@@ -1,0 +1,89 @@
+.appointment-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-card-bg);
+  color: #111968;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.appointment-card--active {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.appointment-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.appointment-card__title {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appointment-card__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.appointment-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.appointment-card__time,
+.appointment-card__doctor {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.appointment-card__doctor {
+  font-weight: 500;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .appointment-card {
+    padding: 1.7rem;
+    border-radius: 2.5rem;
+  }
+
+  .appointment-card__header {
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .appointment-card__title {
+    font-size: 1.1rem;
+  }
+
+  .appointment-card__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .appointment-card__time,
+  .appointment-card__doctor {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .appointment-card {
+    min-width: 250px;
+  }
+}

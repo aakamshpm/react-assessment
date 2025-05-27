@@ -1,0 +1,59 @@
+.graph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 700px;
+  margin: auto;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.bar {
+  width: 6px;
+  border-radius: 2px;
+}
+
+/* Example color classes */
+.light {
+  background: #ccc;
+}
+
+.blue {
+  background: #007bff;
+}
+
+.cyan {
+  background: #00d4ff;
+}
+
+.h-20 {
+  height: 20px;
+}
+.h-30 {
+  height: 30px;
+}
+.h-40 {
+  height: 40px;
+}
+.h-50 {
+  height: 50px;
+}
+.h-60 {
+  height: 60px;
+}
+.h-70 {
+  height: 70px;
+}

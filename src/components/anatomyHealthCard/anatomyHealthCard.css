@@ -1,0 +1,88 @@
+.anatomy-card {
+  position: relative;
+}
+
+.anatomy-card__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.anatomy-card__container.left {
+  flex-direction: row-reverse;
+}
+
+.anatomy-card__scanner {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.anatomy-card__scan-icon {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(743%)
+    hue-rotate(212deg) brightness(97%) contrast(92%);
+}
+
+.anatomy-card__scan-beam {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, var(--color-accent) 0%, transparent 100%);
+  animation: scan 2s infinite ease-in-out;
+  mix-blend-mode: screen;
+  border-radius: 2px;
+}
+
+@keyframes scan {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.anatomy-card__status {
+  display: flex;
+  width: 10rem;
+  max-height: 2.8rem;
+  border-radius: 1rem;
+  gap: 0.3rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.accent-bg {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.highlight-bg {
+  background-color: var(--color-highlight);
+  color: var(--color-accent);
+}
+
+.anatomy-card__icon {
+  width: 23px;
+}
+
+.anatomy-card__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.anatomy-card__text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}

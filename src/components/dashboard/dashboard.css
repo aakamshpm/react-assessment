@@ -1,0 +1,138 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.dashboard__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dashboard__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.dashboard__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  background-color: var(--color-light);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.dashboard__appointments {
+  width: 100%;
+}
+
+.dashboard__appointments-title {
+  color: var(--color-dark);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard__appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upcoming-appointments {
+  margin-top: 2rem;
+}
+
+.upcoming-appointments > div {
+  margin-bottom: 1.5rem;
+}
+
+.upcoming-appointments p {
+  color: var(--color-dark);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.upcoming-appointments .simple-appointment-card {
+  margin-bottom: 1rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+
+  .dashboard__content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .dashboard__main {
+    flex: 2;
+    margin-right: 2rem;
+  }
+
+  .dashboard__sidebar {
+    flex: 1;
+    position: sticky;
+    top: 1.5rem;
+  }
+
+  .dashboard__appointments-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .dashboard__appointments-list .simple-appointment-card {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+  }
+
+  .upcoming-appointments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .upcoming-appointments > div {
+    margin-bottom: 0;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .dashboard {
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    padding: 2rem;
+  }
+
+  .dashboard__appointments-list .simple-appointment-card {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .upcoming-appointments {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-appointments > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .upcoming-appointments p {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+  }
+}

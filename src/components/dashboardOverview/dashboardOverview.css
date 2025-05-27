@@ -1,0 +1,65 @@
+.dashboard-overview {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.dashboard-overview__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.dashboard-overview__heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-dark);
+}
+
+.dashboard-overview__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.dashboard-overview__week-selector {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dashboard-overview__week-label {
+  color: var(--color-accent);
+  font-size: 15px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .dashboard-overview__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dashboard-overview__content {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .dashboard-overview__content {
+    gap: 3rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .dashboard-overview__content {
+    gap: 5rem;
+  }
+}
