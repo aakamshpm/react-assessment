@@ -1,11 +1,11 @@
-import DashboardOverview from "../dashboardOverview/dashboardOverview";
+import DashboardOverview from "../dashboardOverview/dashboardOverview.jsx";
 import "./dashboard.css";
-import ActivityFeed from "../actitivityFeed/ActivityFeed";
-import CalendarView from "../calendarView/CalendarView";
-import { currentAppointments } from "../../data/currentAppoinments";
-import SimpleAppointmentCard from "../simpleAppointmentCard/SimpleAppointmentCard";
-import Header from "../header/Header";
-import { upcomingSchedules } from "../../data/upcomingSchedules";
+import ActivityFeed from "../actitivityFeed/ActivityFeed.jsx";
+import CalendarView from "../calendarView/CalendarView.jsx";
+import { currentAppointments } from "../../data/currentAppoinments.js";
+import SimpleAppointmentCard from "../simpleAppointmentCard/SimpleAppointmentCard.jsx";
+import Header from "../header/Header.jsx";
+import { upcomingSchedules } from "../../data/upcomingSchedules.js";
 
 const Dashboard = () => {
   return (

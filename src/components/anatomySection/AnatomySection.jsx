@@ -1,7 +1,7 @@
 import { GoZoomIn } from "react-icons/go";
 import "./anatomySection.css";
 import { anatomyHealthCardData } from "../../data/anatomyHealthCardData";
-import AnatomyHealthCard from "../anatomyHealthCard/AnatomyHealthCard";
+import AnatomyHealthCard from "../anatomyHealthCard/AnatomyHealthCard.jsx";
 
 const AnatomySection = () => {
   return (

@@ -1,4 +1,4 @@
-import ActivityFeedChart from "../activityFeedChart/ActivityFeedChart";
+import ActivityFeedChart from "../activityFeedChart/ActivityFeedChart.jsx";
 import "./activityFeed.css";
 
 const ActivityFeed = () => {

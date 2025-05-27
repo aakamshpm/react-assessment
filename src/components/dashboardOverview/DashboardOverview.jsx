@@ -1,6 +1,6 @@
 import { IoMdArrowDropdown } from "react-icons/io";
-import AnatomySection from "../anatomySection/AnatomySection";
-import HealthStatusCards from "../healthStatusCards/HealthStatusCards";
+import AnatomySection from "../anatomySection/AnatomySection.jsx";
+import HealthStatusCards from "../healthStatusCards/HealthStatusCards.jsx";
 import "./dashboardOverview.css";
 
 const DashboardOverview = () => {

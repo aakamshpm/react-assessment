@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Dashboard from "./components/dashboard/Dashboard";
-import Sidebar from "./components/sidebar/Sidebar";
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+import Sidebar from "./components/sidebar/Sidebar.jsx";
 
 const App = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
